@@ -11,7 +11,7 @@ function Bookshelf(props){
     // Set the amount of books in the bookshelf on component mount and/or when count changes
     useEffect(() => {
         console.log(count)
-        Axios.get('/api').then( res => {
+        Axios.get('/api').then( res => {console.log(res)
           setBooks([...res.data]); 
         }
             ).catch(err => console.log(err))
